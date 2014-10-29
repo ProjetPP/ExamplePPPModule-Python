@@ -23,7 +23,7 @@ class RequestHandler:
             t = Triple(predicate=Resource(value='be'),
                        subject=Resource(value='I'),
                        object=Resource(value=answer))
-            m = {'accuracy': 1, 'pertinence': 0.1}
+            m = {'accuracy': 1, 'relevance': 0.1}
             r = Response('en', t, m, [TraceItem('ExampleModule', t, m)])
             return [r]
         else:

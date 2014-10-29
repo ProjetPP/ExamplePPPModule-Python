@@ -9,7 +9,7 @@ class ModuleTest(PPPTestCase(app)):
                    subject=Resource(value='you'),
                    object=Missing())
         a = []
-        m = {'accuracy': 1, 'pertinence': 0.1}
+        m = {'accuracy': 1, 'relevance': 0.1}
         for x in {'bot', 'computer', 'flower'}:
             t = Triple(predicate=Resource(value='be'),
                                           subject=Resource(value='I'),
