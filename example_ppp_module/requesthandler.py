@@ -3,7 +3,7 @@
 import random
 
 from ppp_datamodel import Triple, Resource, Missing
-from ppp_datamodel.communication import Response
+from ppp_datamodel.communication import TraceItem, Response
 
 from ppp_core.exceptions import ClientError
 
@@ -19,10 +19,12 @@ class RequestHandler:
             # If the question has the form “You are ?.”
             # (ie. what the NLP should give from “What are you?”)
             answer = random.choice(['bot', 'computer', 'flower'])
-            r =  Response('en', 0.1,
-                          Triple(predicate=Resource(value='be'),
-                                 subject=Resource(value='I'),
-                                 object=Resource(value=answer)))
+
+            t = Triple(predicate=Resource(value='be'),
+                       subject=Resource(value='I'),
+                       object=Resource(value=answer))
+            m = {'accuracy': 1, 'pertinence': 0.1}
+            r = Response('en', t, m, [TraceItem('ExampleModule', t, m)])
             return [r]
         else:
             return []
