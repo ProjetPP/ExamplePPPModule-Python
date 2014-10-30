@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='example_ppp_module',
-    version='0.2',
+    version='0.2.1',
     description='Example python module for the PPP.',
     url='https://github.com/ProjetPP',
     author='Valentin Lorentz',
@@ -24,8 +24,8 @@ setup(
         'Topic :: Software Development :: Libraries',
     ],
     install_requires=[
-        'ppp_datamodel>=0.3,<0.4',
-        'ppp_core>=0.3,<0.4',
+        'ppp_datamodel>=0.3',
+        'ppp_core>=0.3',
     ],
     packages=[
         'example_ppp_module',
