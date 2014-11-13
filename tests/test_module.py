@@ -11,9 +11,7 @@ class ModuleTest(PPPTestCase(app)):
         a = []
         m = {'accuracy': 1, 'relevance': 0.1}
         for x in {'bot', 'computer', 'flower'}:
-            t = Triple(predicate=Resource(value='be'),
-                                          subject=Resource(value='I'),
-                                          object=Resource(value=x))
+            t = Resource(value=x)
             a.append(Response('en', t, m, [TraceItem('ExampleModule', t, m)]))
         # Asserts the response to q is in a.
         self.assertResponsesCount(Request('42', 'en', q, {}, []), 1)
