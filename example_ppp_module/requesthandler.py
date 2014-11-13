@@ -20,9 +20,7 @@ class RequestHandler:
             # (ie. what the NLP should give from “What are you?”)
             answer = random.choice(['bot', 'computer', 'flower'])
 
-            t = Triple(predicate=Resource(value='be'),
-                       subject=Resource(value='I'),
-                       object=Resource(value=answer))
+            t = Resource(value=answer)
             m = {'accuracy': 1, 'relevance': 0.1}
             r = Response('en', t, m, [TraceItem('ExampleModule', t, m)])
             return [r]
