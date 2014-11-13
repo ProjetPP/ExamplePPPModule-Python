@@ -1,6 +1,6 @@
 from ppp_datamodel import Triple, Resource, Missing
 from ppp_datamodel.communication import Request, TraceItem, Response
-from ppp_core.tests import PPPTestCase
+from ppp_libmodule.tests import PPPTestCase
 from example_ppp_module import app
 
 class ModuleTest(PPPTestCase(app)):
@@ -16,5 +16,5 @@ class ModuleTest(PPPTestCase(app)):
                                           object=Resource(value=x))
             a.append(Response('en', t, m, [TraceItem('ExampleModule', t, m)]))
         # Asserts the response to q is in a.
-        self.assertResponsesCount(Request('en', q), 1)
-        self.assertResponsesIn(Request('en', q), a)
+        self.assertResponsesCount(Request('42', 'en', q, {}, []), 1)
+        self.assertResponsesIn(Request('42', 'en', q, {}, []), a)
