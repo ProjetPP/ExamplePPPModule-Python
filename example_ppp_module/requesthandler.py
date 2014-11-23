@@ -13,7 +13,7 @@ class RequestHandler:
         self._request = request.tree
 
     def answer(self):
-        if self._request == Triple(predicate=Resource(value='be'),
+        if self._request == Triple(predicate=Resource(value='identity'),
                                    subject=Resource(value='you'),
                                    object=Missing()):
             # If the question has the form “You are ?.”

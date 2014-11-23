@@ -5,7 +5,7 @@ from example_ppp_module import app
 
 class ModuleTest(PPPTestCase(app)):
     def testReplies(self):
-        q = Triple(predicate=Resource(value='be'),
+        q = Triple(predicate=Resource(value='identity'),
                    subject=Resource(value='you'),
                    object=Missing())
         a = []
