@@ -23,6 +23,10 @@ class RequestHandler:
             # If the question has the form “You identity ?.”
             # (ie. what the NLP should give from “What are you?”)
             return self.produce_answer(random.choice(YOU_ARE))
+        elif self._request == Triple(predicate=Resource(value='identity'),
+                                   subject=Resource(value='I'),
+                                   object=Missing()):
+            return self.produce_answer(random.choice(I_AM))
         else:
             return []
 
