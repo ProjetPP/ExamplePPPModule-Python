@@ -18,7 +18,9 @@ class RequestHandler:
                                    object=Missing()):
             # If the question has the form “You are ?.”
             # (ie. what the NLP should give from “What are you?”)
-            answer = random.choice(['bot', 'computer', 'flower'])
+            answer = random.choice(['artificial intelligence', 'computer',
+                                    'program', 'something great',
+                                    'question-answering tool'])
 
             t = Resource(value=answer)
             m = {'accuracy': 1, 'relevance': 0.1}
