@@ -13,7 +13,6 @@ I_AM = ['someone asking questions', 'someone great', 'an internaut']
 
 class RequestHandler:
     def __init__(self, request):
-        assert request.language == 'en'
         self._request = request.tree
 
     def answer(self):
