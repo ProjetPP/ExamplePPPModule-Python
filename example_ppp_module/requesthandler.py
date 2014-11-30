@@ -8,7 +8,8 @@ from ppp_datamodel.communication import TraceItem, Response
 from ppp_core.exceptions import ClientError
 
 YOU_ARE = ['an artificial intelligence', 'a computer', 'a program',
-           'a something great', 'a question-answering tool']
+           'a something great', 'a question-answering tool',
+           'your father']
 I_AM = ['someone asking questions', 'someone great', 'an internaut']
 
 class RequestHandler:
