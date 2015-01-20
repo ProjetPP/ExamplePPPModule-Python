@@ -5,7 +5,7 @@ import random
 from ppp_datamodel import Triple, Resource, Missing
 from ppp_datamodel.communication import TraceItem, Response
 
-from ppp_core.exceptions import ClientError
+from ppp_libmodule.exceptions import ClientError
 
 YOU_ARE = ['an artificial intelligence', 'a computer', 'a program',
            'a something great', 'a question-answering tool',
