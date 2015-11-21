@@ -1,0 +1,7 @@
+*~
+__pycache__
+.coverage
+example_ppp_module.egg-info/
+build/
+dist/
+.idea/
